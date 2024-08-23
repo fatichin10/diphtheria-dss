@@ -78,6 +78,7 @@ if button:
     pengobatan = obat_predict(feature)
 
     if vaksin != 'Tidak perlu':
+        st.write(f"#### Rekomendasi Vaksin : {vaksin}")
         if dosis < 3:
             if age < 6:
                 st.warning("Segera lengkapi imunisasi dasar (3 dosis) dan imunisasi lanjutan.")
@@ -85,7 +86,7 @@ if button:
                 st.warning("Berikan 3 dosis dengan interval waktu 1 bulan antara dosis pertama, kedua, dan ketiga.")
         elif dosis == 3:
             st.warning("Berikan 1 dosis imunisasi ulangan difteri.")
-        st.write(f"#### Rekomendasi Vaksin : {vaksin}")
 
     if len(pengobatan) > 0:
         st.write(f"#### Rekomendasi Pengobatan : {pengobatan}")
+        st.warning("Bila dalam 7 hari timbul ESO / gejala klinis difteri, segera rujuk ke Fasyankes.")
