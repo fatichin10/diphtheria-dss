@@ -64,14 +64,14 @@ def main():
 
         with col5:
             st.write("""##### Hasil Pemeriksaan : """)
-            diagnosis = st.selectbox('Diagnosis :', ('D. Tonsil', 'D. Pharynx', 'D. Lharynx', 'D. Bibir', 'D. Lidah', 'D. Oropharyn', 'Unknown'), index=None)
+            diagnosis = st.selectbox('Diagnosis :', ('D. Tonsil', 'D. Pharynx', 'D. Lharynx', 'D. Bibir', 'D. Lidah', 'D. Oropharyn', 'Suspect'), index=None)
             if diagnosis=="D. Tonsil": f15 = 0
             elif diagnosis=="D. Pharynx": f15 = 1
             elif diagnosis=="D. Lharynx": f15 = 2
-            elif diagnosis=="Unknown": f15 = 3
+            elif diagnosis=="Suspect": f15 = 3
             elif diagnosis=="D. Bibir": f15 = 4
             elif diagnosis=="D. Lidah": f15 = 5
-            else: f15 = 5
+            else: f15 = 3
     
             ku = st.selectbox('Kulit :', ("Baik", "Lemah", "Cyanosis", "Shock"), index=None)
             f16 = 0
